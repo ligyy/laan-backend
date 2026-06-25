@@ -47,7 +47,8 @@ router.post('/add', auth,  async (req, res) => {
       banner: savedBanner
     });
   } catch (error) {
-    res.status(400).json({ error: 'Your request could not be processed. Please try again.' });
+    console.error("BANNER UPLOAD ERROR:", error);
+    res.status(400).json({ error: 'Your request could not be processed. Please try again.', details: error.message || error });
   }
 });
 
