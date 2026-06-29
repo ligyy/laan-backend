@@ -5,11 +5,13 @@ const productRoutes = require('./product');
 const categoryRoutes = require('./category');
 const subcategoryRoutes = require('./subcategory');
 const bannerRoutes = require('./banner');
+const testimonialRoutes = require('./testimonial');
 
 router.use('/auth', authRoutes);
 router.use('/product', productRoutes);
 router.use('/category', categoryRoutes);
 router.use('/subcategory', subcategoryRoutes);
 router.use('/banner', bannerRoutes);
+router.use('/testimonial', testimonialRoutes);
 
 module.exports = router;
